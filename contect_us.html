@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-lang="contact_title">聯絡我們 - 睿至行銷顧問</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .contact-flex {
+      display: flex;
+      flex-direction: row;
+      gap: 40px;
+      justify-content: center;
+      align-items: flex-start;
+      margin-top: 24px;
+      flex-wrap: wrap;
+    }
+    form {
+      width: 100%;
+      max-width: 520px; /* 稍微收窄，與右側資訊搭配更美觀 */
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding: 40px;
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+      box-sizing: border-box;
+    }
+    form label {
+      font-weight: bold;
+      color: #333;
+      text-align: left;
+      display: block;
+      margin-bottom: 1px;
+    }
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 15px;
+      box-sizing: border-box;
+    }
+    form textarea {
+      min-height: 140px;
+      resize: vertical;
+    }
+    form button {
+      background-color: #f26522;
+      color: white;
+      border: none;
+      padding: 14px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    form button:hover {
+      background-color: #d35400;
+    }
+    main h2 {
+      text-align: center;
+      margin-top: 40px;
+      color: #1f3d2d;
+    }
+    .contact-info {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+      padding: 36px 30px 24px 30px;
+      min-width: 280px;
+      max-width: 340px;
+      font-size: 15px;
+      line-height: 1.6;
+      color: #444;
+      box-sizing: border-box;
+    }
+    .contact-info h3 {
+      color:#80c397;
+      margin-bottom:0.6em;
+      font-size: 26px;
+      font-weight: bold;
+    }
+    .contact-info .contact-title {
+      font-weight: bold;
+      color:#4f3470;
+      font-size: 18px;
+      margin-bottom: 0.8em;
+    }
+    .contact-info .contact-label {
+      color: #8c8c8c;
+      font-size: 13px;
+      margin-bottom: 2px;
+    }
+    .contact-info a { color: #4472c4; text-decoration: underline; word-break: break-all;}
+    .contact-info .map {
+      margin-top: 18px;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(40,40,40,0.09);
+    }
+    @media (max-width: 950px) {
+      .contact-flex { flex-direction: column; align-items: stretch; }
+      .contact-info { max-width: 100%; margin: 0 auto; margin-top: 40px; }
+      form { max-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="index.html" class="logo-link">
+      <img src="images/logo.png" alt="Logo" class="logo" />
+      <span class="site-title" data-lang="site_title">睿至行銷顧問有限公司</span>
+    </a>
+  </header>
+  <nav>
+    <div class="nav-left">
+      <a id="nav_index" href="index.html" data-lang="nav_index">主頁</a>
+      <a id="nav_about" href="about.html" data-lang="nav_about">關於我們</a>
+      <a id="nav_service" href="services.html" data-lang="nav_service">服務項目</a>
+       <a id="nav_advantage" href="advantage.html"  data-lang="nav_advantage">優勢&價值</a>
+      <a id="nav_contect_us" href="contect_us.html" class="active" data-lang="nav_contect_us">聯絡我們</a>
+    </div>
+    <div class="nav-right">
+      <select id="langSelector" onchange="switchLanguage()">
+        <option value="zh">繁體中文</option>
+        <option value="en">English</option>
+      </select>
+    </div>
+  </nav>
+  <main>
+    <h2 data-lang="contact_heading">聯絡我們</h2>
+    <div class="contact-flex">
+      <!-- 左：表單 -->
+      <form action="mailto:your@email.com" method="POST" enctype="multipart/form-data">
+        <label data-lang="contact_name_label">姓名 (必填)：</label>
+        <input type="text" name="name" required />
+        <label data-lang="contact_phone_label">電話 (必填)：</label>
+        <input type="tel" name="phone" required />
+        <label data-lang="contact_email_label">電子郵件地址 (必填)：</label>
+        <input type="email" name="email" required />
+        <label data-lang="contact_subject_label">主旨 (選填)：</label>
+        <input type="text" name="subject" />
+        <label data-lang="contact_message_label">描述 (必填)：</label>
+        <textarea name="message" required></textarea>
+        <label data-lang="contact_file_label">附加檔案：</label>
+        <input type="file" name="file" />
+        <button type="submit" data-lang="contact_submit_button">送出</button>
+      </form>
+      <!-- 右：聯絡資訊 -->
+      <aside class="contact-info">
+        <div><span class="contact-label">ADDRESS</span><br>XX市XX區XX路X段XXX號XX樓<br>XXF., No.XXX, Sec.X, XXXX Rd.,<br>XXXXX Dist., New Taipei City<br>XXXX, Taiwan(R.O.C.)</div>
+        <div style="margin: 8px 0 0 0;"><span class="contact-label">TEL</span>: 02-XXXX-XXXX</div>
+        <div><span class="contact-label">EMAIL</span>: <a href="mailto:XXXX@XXXX.com.tw">XXXX@XXXX.com.tw</a></div>
+        <div class="map">
+          <iframe src="https://www.google.com/maps?q=新北市板橋區文化路一段266號12樓&output=embed" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </aside>
+    </div>
+  </main>
+  <div id="footer"></div>
+  <img src="images/logo.png" alt="Corner Logo" class="corner-logo" />
+  <script src="lang.js"></script>
+  <script src="load-footer.js"></script>
+</body>
+</html>
