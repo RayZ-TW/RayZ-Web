@@ -86,7 +86,7 @@ const translations = {
   },
   en: {
     //--------------------Index.html--------------------//
-    site_title: "RayZ MARKETING CONSULTANCY LTD.",
+    site_title: "RayZ Marketing Consulting Co. Ltd.",
     nav_hero: "Home",
     nav_index : "About RayZ",
     nav_features: "Features",
