@@ -418,18 +418,18 @@ main {
 
 /* 圖片區 */
 .service-imgbox {
-  flex: 0 0 280px;
+  flex: 0 0 80px;
   display: flex;
   align-items: stretch;
   justify-content: flex-end;
   padding: 0;
   border-radius: 0 20px 20px 0;
-  min-width: 220px;
+  min-width: 180px;
   min-height: 100%;
-  max-width: 400px;
+  max-width: 220px;
   position: relative;
   overflow: hidden;
-  position: relative; /* 讓 img 的 absolute 有依據 */
+  position: relative; 
 }
 .service-right .service-imgbox {
   border-radius: 20px 0 0 20px;
@@ -438,7 +438,7 @@ main {
   width: 100%;
   height: 100%;
   min-height: 100%;
-  object-fit: cover;   /* cover 讓圖片自動裁切鋪滿區塊 */
+  object-fit: contain;   
   border-radius: 0;
   display: block;
   background: transparent;
@@ -449,7 +449,7 @@ main {
 /* 內容區 */
 .service-content {
   flex: 1 1 0;
-  padding: 36px 30px 36px 32px;
+  padding: 36px 10px 36px 32px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;  /* 垂直靠上 */
@@ -818,19 +818,17 @@ footer {
     font-size: 1rem !important;
     line-height: 1.6;
     text-align: left !important;
-    padding-right: 7vw !important;
-  }
-  .index-feature-block img {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
+    padding-right: 3vw !important;
   }
   .feature-block-img {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: block !important;
+    /* 保留你原本設定 */
     position: static !important;
     width: 100% !important;
     max-width: 90vw !important;
     margin-top: 16px !important;
-    display: block !important;
     object-fit: contain !important;
   }
   /* 服務項目 */
@@ -856,7 +854,7 @@ footer {
     overflow: visible !important;
   }
   .service-content {
-    padding: 18px 12px 8px 12px !important;
+    padding: 18px 2px 8px 12px !important;
     align-items: flex-start !important;
   }
   .service-content h3 {
@@ -877,7 +875,7 @@ footer {
     min-width: 0 !important;
     max-width: 100% !important;
     min-height: 0 !important;
-    max-height: 180px !important;
+    max-height: 100% !important;
     margin: 0 auto !important;
     padding: 0 !important;
     border-radius: 0 0 14px 14px !important;
