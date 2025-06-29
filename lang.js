@@ -2,7 +2,7 @@
 const translations = {
   zh: {
     //--------------------Title--------------------//
-    site_title: "睿至行銷顧問有限公司 Ver1.0",
+    site_title: "睿至行銷顧問有限公司 Ver1.1",
     nav_hero: "首頁",
     nav_index : "關於睿至",
     nav_features: "特色亮點",
@@ -83,6 +83,8 @@ const translations = {
     contact_message_label  : "訊息內容*",
     contact_file_label : "上傳檔案",
     contact_submit_button : "提交",
+
+    footer_text2 : "網站由睿至行銷顧問有限公司製作",
   },
   en: {
     //--------------------Index.html--------------------//
@@ -151,7 +153,7 @@ const translations = {
     services_7_item_2_desc: "Support for regulatory compliance and reporting, with data tracking and reporting functions designed to meet industry standards.",
 
     services_8_title: "Professional Staff Recruitment & Training",
-    services_8_item_1: "Provision of full-time or part-time Clinical Research Coordinators (CRC), Clinical Research Nurses (CRN), and Clinical Research Associates (CRA) required for clinical trials.",
+    services_8_item_1: "Provision of full-time or part-time CRC, CRN, and CRA required for clinical trials.",
     services_8_item_2: "Rigorous personnel screening and verification processes.",
     services_8_item_3: "Professional skills training and continuing education to ensure compliance with GCP and relevant regulations.",
     services_8_item_4: "Assisting with smooth clinical trial execution to accelerate the drug approval and market launch process.",
@@ -164,6 +166,8 @@ const translations = {
     contact_message_label  : "Message*",
     contact_file_label : "Upload File",
     contact_submit_button : "Submit",
+
+    footer_text2 : "This website is developed by RayZ Marketing Consulting Co., Ltd.",
 }
 };
 
