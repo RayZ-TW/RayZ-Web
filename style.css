@@ -476,6 +476,7 @@ main {
   color: #153f31;
   line-height: 2.1;
   padding-left: 1.2em;
+  padding-right: 7vw !important;
   position: relative;
   text-align: left !important;
 }
@@ -628,88 +629,15 @@ footer {
   height: 40px;
 }
 
-
-
 /* ======================== 響應式 RWD 設計 ======================== */
-/* ======================== 統一 RWD 響應式設計 ======================== */
-
-/* 桌機與大螢幕(>1280px): 維持現有設計，但下方覆蓋會自動擋掉不該有的溢出 */
-
-html, body {
-  width: 100% !important;
-  max-width: 100% !important;
-  overflow-x: hidden !important;
-  box-sizing: border-box;
-}
-
-/* RWD 1280px 以下：2欄轉1欄，gap變小 */
-@media (max-width: 900px) {
-  .index-feature-grid,
-  .services-section-grid2x2 {
-    grid-template-columns: 1fr !important;
-    gap: 16px !important;
+/* ======================== 600px Only 手機專用 RWD ======================== */
+@media (max-width: 600px) {
+  html, body {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+    background: #B89873;
   }
-  .service-card {
-    flex-direction: column !important;
-    width: 100% !important;
-    border-radius: 16px !important;
-    overflow: hidden !important;
-  }
-  .service-content {
-    /*padding: 18px 14px 14px 14px !important;*/
-    padding: 20px 18px 24px 18px !important;
-    align-items: flex-start !important;
-  }
-  .service-imgbox {
-    aspect-ratio: 16/9 !important;
-    flex: unset !important;
-    width: 100% !important;
-    min-width: 0 !important;
-    max-width: 100% !important;
-    height: auto !important;
-    /*height: 40vw !important;*/
-    min-height: 0 !important;
-    max-height: none !important;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    border-radius: 0 0 16px 16px !important;
-    overflow: hidden !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    background: transparent !important;
-    position: static !important;
-    
-  }
-  .service-imgbox img {
-  position: static !important;
-  width: 100% !important; /* 讓圖片寬度佔滿其父容器 */
-  height: auto !important; /* 高度自動調整，保持圖片比例 */
-  min-width: 0 !important;
-  min-height: 0 !important;
-  max-width: 100% !important;
-  max-height: 100% !important;
-  object-fit: cover !important;
-  display: block !important;
-  margin: 0 auto !important;
-  border-radius: 0 0 16px 16px !important;
-  box-shadow: none !important;
-  background: transparent !important;
-  position: static !important;
-  top: auto !important;
-  left: auto !important;
-  right: auto !important;
-  bottom: auto !important;
-}
-  /* 右圖左文時也一樣 */
-  .service-right .service-imgbox {
-    border-radius: 0 0 16px 16px !important;
-  }
-}
-
-/* RWD 900px 以下：主要 RWD 斷點 */
-@media (max-width: 900px) {
-  /* Navbar與漢堡選單 */
   .navbar {
     flex-direction: column;
     padding: 0 2vw !important;
@@ -719,6 +647,9 @@ html, body {
     width: 100vw !important;
     z-index: 2000;
     box-sizing: border-box;
+  }
+  .logo {
+    height: 40px !important;
   }
   .logo-link { margin-bottom: 0; }
   .nav-center {
@@ -777,146 +708,249 @@ html, body {
     height: 4px !important;
   }
   .section-anchor-fix {
-    scroll-margin-top: 90px; /* 你手機navbar如果比較高，可以設更大 */
+    scroll-margin-top: 90px;
   }
-
-  /* hero & section 區塊全滿版，不要 margin-left calc(50% - 50vw) */
-  .hero-section,
-  .index-feature-wrapper-features,
-  .index-feature-wrapper-services,
-  .index-feature-wrapper-contect_us {
+  main {
+    padding-top: 70px !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    text-align: left !important;
+  }
+  /* hero 區塊 */
+  .hero-section {
     width: 100% !important;
     margin-left: 0 !important;
     padding-left: 0 !important;
     padding-right: 0 !important;
     box-sizing: border-box !important;
   }
-  .index-feature-block2 {
-    background-size: cover !important;
-    background-position: center center !important;
+  .hero-image {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: 70% center !important;
+    border-radius: 0 !important;
   }
-
-  /* grid & flex 設定: 單欄、gap小 */
-  .index-feature-grid,
+  .hero-title {
+    left: 8vw !important;
+    top: 16vw !important;
+    font-size: 8vw !important;
+    line-height: 1.22 !important;
+    white-space: pre-line;
+    max-width: 90vw;
+    z-index: 2;
+    text-shadow: 0 2px 6px #624e3a50, 0 1px 0 #fff5;
+  }
+  /* index 關於睿至大區塊 */
+  .index-feature-block2 {
+    flex-direction: column !important;
+    min-height: 120px !important;
+    width: 100% !important;
+    padding: 18vw 0 4vw 0 !important;
+    gap: 4vw !important;
+    margin-left: 0 !important;
+    background-size: cover !important;
+    box-shadow: none !important;
+  }
+  .index-bg-overlay {
+    display: none !important;
+  }
+  .index-left,
+  .index-right {
+    width: 100% !important;
+    position: static !important;
+  }
+  .index-left h3 {
+    font-size: 1.25rem !important;
+    padding: 0 0 0 6vw !important;
+    text-align: left !important;
+  }
+  .index-right p {
+    font-size: 1.07rem !important;
+    margin: 0 !important;
+    padding: 0 6vw 0 6vw !important;
+    line-height: 1.7;
+    max-width: 92vw;
+    word-break: break-word;
+    background: rgba(255,255,255,0.75);
+    border-radius: 8px;
+    text-align: left !important;
+  }
+  /* 特色亮點區塊 */
+  .index-feature-wrapper-features {
+    padding: 10vw 0 0vw 0 !important;
+    background-size: cover !important;
+    min-height: unset !important;
+  }
+  .vision-block {
+    padding-left: 5vw !important;
+    margin-top: 8vw !important;
+    margin-bottom: 7vw !important;
+  }
+  .vision-block h3 {
+    font-size: 1.3rem !important;
+  }
+  .vision-block p {
+    font-size: 1rem !important;
+    padding-right: 5vw !important;
+    line-height: 1.6;
+  }
+  .index-feature-grid {
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+    width: 100% !important;
+    padding: 0 2vw !important;
+  }
+  .index-feature-block {
+    padding: 20px 12px 56px 12px !important;
+    border-radius: 12px !important;
+    min-height: unset !important;
+    max-width: 96vw !important;
+    margin: 0 auto 18px auto !important;
+    box-shadow: none !important;
+  }
+  .index-feature-block h3 {
+    font-size: 1.12rem !important;
+    text-align: left !important;
+    margin-bottom: 0.5em !important;
+  }
+  .index-feature-block p {
+    font-size: 1rem !important;
+    line-height: 1.6;
+    text-align: left !important;
+    padding-right: 7vw !important;
+  }
+  .index-feature-block img {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  .feature-block-img {
+    position: static !important;
+    width: 100% !important;
+    max-width: 90vw !important;
+    margin-top: 16px !important;
+    display: block !important;
+    object-fit: contain !important;
+  }
+  /* 服務項目 */
+  .index-feature-wrapper-services {
+    padding: 10vw 0 0 0 !important;
+    min-height: unset !important;
+    background-size: cover !important;
+  }
   .services-section-grid2x2 {
     grid-template-columns: 1fr !important;
     gap: 14px !important;
     width: 100% !important;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
+    padding: 0 2vw !important;
   }
-  .service-card,
-  .service-card.reverse {
+  .service-card {
     flex-direction: column !important;
     min-height: unset !important;
-    border-radius: 16px !important;
+    border-radius: 14px !important;
     width: 100% !important;
-    box-sizing: border-box !important;
+    margin: 0 auto 16px auto !important;
+    box-shadow: none !important;
+    background: linear-gradient(135deg, rgba(219,244,255,0.97) 0%, rgba(178,230,207,0.91) 100%);
+    overflow: visible !important;
   }
   .service-content {
-    padding: 18px 10px 12px 10px !important;
+    padding: 18px 12px 8px 12px !important;
     align-items: flex-start !important;
   }
-  /*
-  .service-imgbox,
-  .service-card.reverse .service-imgbox {
-    border-radius: 0 0 14px 14px !important;
-    min-width: 100px !important;
-    max-width: unset !important;
-    padding: 8px 0 10px 0 !important;
+  .service-content h3 {
+    font-size: 1.07rem !important;
+    border-left: 4px solid #34d399;
+    padding-left: 0.6em !important;
+    margin-bottom: 0.8em !important;
   }
-  .service-imgbox img { width: 110px !important; height: 110px !important; }
-  */
-  /* 聯絡我們 */
-  .contact-flex { flex-direction: column !important; align-items: stretch !important; gap: 24px !important; }
-  .contact-info { max-width: 100% !important; margin: 0 auto !important; margin-top: 32px !important; }
-  form { max-width: 100% !important; padding: 18px !important; }
-
-  /* 關於睿至區塊 */
-  .index-feature-block2 {
-    flex-direction: column !important;
-    text-align: center !important;
-    gap: 18px !important;
-    min-height: 250px !important;
-    padding: 20px 0 !important;
-    box-sizing: border-box !important;
+  .service-content li {
+    font-size: 1rem !important;
+    padding-left: 1.1em !important;
+    line-height: 1.7 !important;
+    margin-bottom: 0.4em !important;
+    word-break: break-word;
   }
-  .index-left, .index-right {
-    flex: unset !important;
+  .service-imgbox {
     width: 100% !important;
-  }
-  .index-left h3 { font-size: 32px !important; text-align: center !important; padding: 0 !important; }
-  .index-right p { 
-    margin-left: 0 !important;
-    padding-left: 5% !important;   
-    text-align: left !important; 
-  }
-
-  /* section padding 統一 */
-  section { padding: 0 !important; margin: 0 !important; width: 100% !important; }
-  main { padding-left: 0 !important; padding-right: 0 !important; }
-
-  /* Hero Title & Logo */
-  .hero-image {
-    object-position: 70% center !important; /* 70%代表偏右，可以再微調數值 */
-  }
-  .hero-title { 
-    font-size: 13vw !important; /* 比原本大很多，依照你喜好再調 */
-    left: 6vw !important;
-    top: 13vw !important;   /* 若想往下移也可再調 */
-    line-height: 1.5 !important; /* 字間距更緊湊，看需求 */
-  }
-  .hero-logo { 
-    width: 120px !important; 
-    top: 40% !important; 
-  }
-
-  /* 浮動logo/頁尾logo縮小 */
-  .corner-logo, .footer-logo { height: 36px !important; right: 8px !important; bottom: 8px !important; }
-}
-
-/* 600px 以下：更小手機細節 */
-@media (max-width: 600px) {
-  .hero-title { font-size: 8vw !important; top: 9vw !important; left: 6vw !important; }
-  .service-imgbox img { width: 84px !important; height: 84px !important; }
-  .index-left h3 { font-size: 24px !important; }
-  .index-feature-block2 { min-height: 160px !important; }
-  form { font-size: 14px !important; }
-  .footer-content { font-size: 12px !important; }
-}
-
-/* 桌機 > 900px：保持現狀 */
-@media (max-width: 900px) and (min-width: 601px) {
-  .service-imgbox img {
-    width: 120px !important;
-    height: 120px !important;
-    min-width: 100px !important;
-    min-height: 100px !important;
-    max-width: 180px !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    min-height: 0 !important;
     max-height: 180px !important;
-    object-fit: cover !important;
-    border-radius: 0 0 16px 16px !important;
-    display: block !important;
     margin: 0 auto !important;
+    padding: 0 !important;
+    border-radius: 0 0 14px 14px !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    position: static !important;
+    overflow: hidden !important;
     background: transparent !important;
+  }
+  .service-imgbox img {
+    width: 100% !important;
+    height: auto !important;
+    min-width: 0 !important;
+    max-width: 100vw !important;
+    max-height: 180px !important;
+    object-fit: contain !important;
+    border-radius: 0 0 14px 14px !important;
+    display: block !important;
+    background: transparent !important;
+    margin: 0 auto !important;
+    position: static !important;
+  }
+  /* 聯絡我們 Contact Us */
+  .index-feature-wrapper-contect_us {
+    padding: 7vw 0 7vw 0 !important;
+    min-height: unset !important;
+    background-size: cover !important;
+    width: 100% !important;
+    margin-left: 0 !important;
+  }
+  .contact-flex {
+    flex-direction: column !important;
+    gap: 18px !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    padding: 0 5vw !important;
+    align-items: stretch !important;
+  }
+  form {
+    max-width: 100% !important;
+    padding: 18px 8px !important;
+    font-size: 1rem !important;
+    border-radius: 12px !important;
     box-shadow: none !important;
   }
-}
-@media (max-width: 600px) {
-  .service-imgbox img {
-    width: 84px !important;
-    height: 84px !important;
-    min-width: 64px !important;
-    min-height: 64px !important;
-    object-fit: cover !important;
+  .contact-info {
+    max-width: 100% !important;
+    padding: 20px 8px 18px 8px !important;
+    border-radius: 12px !important;
+    font-size: 1rem !important;
+    margin: 0 auto 8px auto !important;
+    box-shadow: none !important;
   }
-  /* 卡片內文避免溢出 */
-  .service-content p, .service-content li {
-    word-break: break-word;
-    overflow-wrap: break-word;
+  .contact-info .map {
+    margin-top: 12px !important;
+    height: 140px !important;
+    border-radius: 8px !important;
+  }
+  .corner-logo {
+    height: 32px !important;
+    bottom: 10px !important;
+    right: 10px !important;
+  }
+  footer {
+    font-size: 0.95rem !important;
+    padding: 12px 0 !important;
   }
 }
 
+
+
+/* ================================================================ */
 html {
   scroll-behavior: smooth !important;
 }
