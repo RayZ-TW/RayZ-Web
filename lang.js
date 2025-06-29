@@ -2,7 +2,7 @@
 const translations = {
   zh: {
     //--------------------Title--------------------//
-    site_title: "睿至行銷顧問有限公司 Ver0.2",
+    site_title: "睿至行銷顧問有限公司 Ver0.3",
     nav_hero: "首頁",
     nav_index : "關於睿至",
     nav_features: "特色亮點",
