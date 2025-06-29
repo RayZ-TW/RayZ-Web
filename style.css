@@ -229,6 +229,7 @@ main {
   text-align: left; /* ← 這行讓所有內文左對齊 */
   position: relative;
   z-index: 2; /* 讓內容蓋在 overlay 上方 */
+  padding-right: 5vw; /* 右側內距，確保文字不貼邊 */
 }
 .index-right p {
   color: #284d5e;
@@ -238,7 +239,7 @@ main {
   letter-spacing: 0.04em;
   text-shadow: 0 1px 0 #ffffff88;
   /*font-family: 'Roboto', 'Montserrat', 'Noto Sans TC', Arial, sans-serif;*/
-  margin-left: 440px;
+  margin-left: 320px;
 }
 .index-feature-block2 h3 {
   margin-top: 0;
@@ -754,7 +755,7 @@ footer {
     flex-direction: column !important;
     min-height: 120px !important;
     width: 100% !important;
-    padding: 18vw 0 4vw 0 !important;
+    padding: 18vw 0 4vw 4vw !important;
     gap: 4vw !important;
     margin-left: 0 !important;
     background-size: cover !important;
@@ -813,11 +814,14 @@ footer {
     padding: 20px 12px 56px 12px !important;
     border-radius: 12px !important;
     min-height: unset !important;
-    max-width: 96vw !important;
+    max-width: 90vw !important;
     margin: 0 auto 18px auto !important;
     box-shadow: none !important;
-    padding-bottom: 20px !important;
-    position: static !important;
+    padding-bottom: 0px !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;   /* 關鍵！所有子元素水平置中 */
   }
   .index-feature-block h3 {
     font-size: 1.12rem !important;
@@ -831,15 +835,14 @@ footer {
     padding-right: 3vw !important;
   }
   .feature-block-img {
-    margin-left: auto !important;
-    margin-right: auto !important;
-    display: block !important;
     position: static !important;
+    display: block !important;
     width: 100% !important;
     max-width: 90vw !important;
     margin-top: 16px !important;
     object-fit: contain !important;
-
+    margin-left: 50% !important;
+    margin-right: auto !important;
   }
   /* 服務項目 */
   .index-feature-wrapper-services {
@@ -857,7 +860,7 @@ footer {
     display: flex !important;
     flex-direction: column !important;
     align-items: stretch !important;
-    width: 100% !important;
+    width: 96% !important;
     min-height: unset !important;
     margin: 0 auto 18px auto !important;
     border-radius: 14px !important;
@@ -924,7 +927,7 @@ footer {
   .contact-flex {
     flex-direction: column !important;
     gap: 18px !important;
-    width: 100% !important;
+    width: 95% !important;
     margin: 0 auto !important;
     padding: 0 5vw !important;
     align-items: stretch !important;
