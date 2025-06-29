@@ -45,7 +45,7 @@
   height: 4px;
   background: #eee2d6;
   border-radius: 3px;
-  transition: all 3s;
+  transition: all 0.1s;
 }
 
 .nav-center {
