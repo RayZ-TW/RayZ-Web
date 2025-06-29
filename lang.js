@@ -64,15 +64,15 @@ const translations = {
     services_6_item_3 : "公益活動與社會責任專案",
     services_6_item_4 : "確保活動流程順暢並達成預期目標",
 
-    services_7_title : "客製化CRM系統 Customer Relationship Management",
-    services_7_item_1_desc : "有效管理病患支持計畫互動 : <br>若貴公司有執行病患支持與扶助計畫，CRM系統可以合法合規地管理參與病患的非敏感性互動記錄，協助團隊提供更個人化和及時的支援。",
-    services_7_item_2_desc : "支援法規遵循與報告： <br>客製化系統可以設計符合產業規範的數據追蹤與報告功能，協助貴公司滿足相關的合規性要求。",
+    services_7_title : "客製化CRM系統",
+    services_7_item_1_desc : "有效管理病患支持計畫(PSP)非敏感性互動記錄，協助團隊提供更個人化和及時的支援。",
+    services_7_item_2_desc : "支援法規遵循與報告設計符合產業規範的數據追蹤與報告功能",
 
-    services_8_title : "專業人員招募、審核與訓練",
-    services_8_item_1 : "提供臨床試驗所需之全職或兼職臨床研究協調員 (CRC)、臨床研究護理師 (CRN)、臨床研究專員 (CRA)",
-    services_8_item_2 : "嚴謹的人員篩選與背景審核流程",
-    services_8_item_3 : "專業技能培訓與持續教育，確保符合GCP及相關法規要求",
-    services_8_item_4 : "協助臨床試驗順利執行，加速新藥上市進程",
+    services_8_title : "專業人員招募與訓練",
+    services_8_item_1 : "提供臨床試驗所需之全職或兼職CRC、CRN及CRA",
+    services_8_item_2 : "嚴謹的人員篩選與審核流程",
+    services_8_item_3 : "專業技能培訓與持續教育，確保符合GCP及相關法規要求。",
+    services_8_item_4 : "協助臨床試驗順利執行，加速新藥上市進程。",
 
     //--------------------Contact_Us.html--------------------//
     contact_heading: "聯絡我們",
@@ -146,15 +146,15 @@ const translations = {
     services_6_item_3: "Public welfare and corporate social responsibility projects",
     services_6_item_4: "Ensuring smooth event flow and achieving expected objectives",
 
-    services_7_title: "Customized CRM Systems (Customer Relationship Management)",
-    services_7_item_1_desc: "Effective management of patient support program interactions :<br>For companies running patient assistance programs, our CRM systems enable compliant tracking of non-sensitive patient interactions, empowering your team to deliver more personalized and timely support.",
-    services_7_item_2_desc: "Regulatory compliance and reporting :<br>Customized systems are designed to support industry-specific data tracking and reporting features, helping your organization meet all regulatory requirements.",
+    services_7_title: "Customized CRM Systems",
+    services_7_item_1_desc: "Efficient management of non-sensitive interaction records in Patient Support Programs (PSP), enabling teams to deliver more personalized and timely support.",
+    services_7_item_2_desc: "Support for regulatory compliance and reporting, with data tracking and reporting functions designed to meet industry standards.",
 
-    services_8_title: "Professional Staff Recruitment, Screening & Training",
-    services_8_item_1: "Recruitment of full-time or part-time Clinical Research Coordinators (CRC), Clinical Research Nurses (CRN), and Clinical Research Associates (CRA) for clinical trials",
-    services_8_item_2: "Rigorous personnel screening and background checks",
-    services_8_item_3: "Professional skills training and continuous education to ensure GCP and regulatory compliance",
-    services_8_item_4: "Facilitating successful clinical trial execution and accelerating drug launch processes",
+    services_8_title: "Professional Staff Recruitment & Training",
+    services_8_item_1: "Provision of full-time or part-time Clinical Research Coordinators (CRC), Clinical Research Nurses (CRN), and Clinical Research Associates (CRA) required for clinical trials.",
+    services_8_item_2: "Rigorous personnel screening and verification processes.",
+    services_8_item_3: "Professional skills training and continuing education to ensure compliance with GCP and relevant regulations.",
+    services_8_item_4: "Assisting with smooth clinical trial execution to accelerate the drug approval and market launch process.",
     //--------------------Contact_Us.html--------------------//
     contact_heading: "Contact Us",
     contact_name_label : "Name*",
