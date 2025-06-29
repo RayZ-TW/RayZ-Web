@@ -640,19 +640,24 @@ footer {
     background: #B89873;
   }
   .navbar {
-    flex-direction: column;
-    padding: 0 2vw !important;
-    min-height: 70px !important;
-    position: fixed !important;
-    top: 0; left: 0; right: 0;
-    width: 100vw !important;
-    z-index: 2000;
+    flex-direction: row !important;  /* 關鍵：保持水平方向 */
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 0 4vw !important;
+    min-height: 56px !important;     /* 手機建議高度 */
+    height: 56px !important;
     box-sizing: border-box;
   }
   .logo {
-    height: 40px !important;
+    height: 34px !important;   /* 手機建議小一點 */
+    margin-right: 2px !important;
   }
-  .logo-link { margin-bottom: 0; }
+  .logo-link { 
+   /* margin-bottom: 0; */
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 6px !important;
+  }
   .nav-center {
     position: absolute !important;
     top: 60px !important;
@@ -689,20 +694,22 @@ footer {
     flex-direction: row !important;
     align-items: center !important;
     justify-content: flex-end !important;
-    gap: 8px !important;
-    width: auto !important;
+    gap: 10px !important;
     margin-left: auto !important;
+    /* 保證貼右 */
     position: static !important;
   }
   .nav-right button {
-    font-size: 26px !important;
-    padding: 3px 6px !important;
+    font-size: 24px !important;
+    /*padding: 3px 6px !important;*/
+    padding: 0 !important;
   }
   .hamburger-menu {
     display: flex !important;
+    width: 32px !important;
+    height: 32px !important;
+    align-items: center !important;
     margin-left: 0 !important;
-    width: 36px !important;
-    height: 36px !important;
   }
   .hamburger-menu span {
     width: 26px !important;
