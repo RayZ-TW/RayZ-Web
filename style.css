@@ -821,7 +821,7 @@ footer {
     padding: 20px 12px 56px 12px !important;
     border-radius: 12px !important;
     min-height: unset !important;
-    max-width: 90vw !important;
+    max-width: 85vw !important;
     margin: 0 auto 18px auto !important;
     box-shadow: none !important;
     padding-bottom: 0px !important;
@@ -867,7 +867,7 @@ footer {
     display: flex !important;
     flex-direction: column !important;
     align-items: stretch !important;
-    width: 96% !important;
+    width: 90% !important;
     min-height: unset !important;
     margin: 0 auto 18px auto !important;
     border-radius: 14px !important;
@@ -934,7 +934,7 @@ footer {
   .contact-flex {
     flex-direction: column !important;
     gap: 18px !important;
-    width: 95% !important;
+    width: 92% !important;
     margin: 0 auto !important;
     padding: 0 5vw !important;
     align-items: stretch !important;
