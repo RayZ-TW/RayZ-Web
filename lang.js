@@ -2,7 +2,7 @@
 const translations = {
   zh: {
     //--------------------Title--------------------//
-    site_title: "睿至行銷顧問有限公司 Ver1.1",
+    site_title: "睿至行銷顧問有限公司",
     nav_hero: "首頁",
     nav_index : "關於睿至",
     nav_features: "特色亮點",
@@ -213,8 +213,56 @@ function switchLanguage() {
   applyLanguage(selectedLang);
 }
 
+
 window.onload = () => {
   const savedLang = localStorage.getItem("selectedLanguage") || "zh";
   applyLanguage(savedLang);
   document.body.classList.add("visible");
 };
+
+
+/*聯絡我們 送出信件*/
+// 你的 Google Apps Script 網址（換成自己的）
+const GAS_URL = 'https://script.google.com/macros/s/AKfycbwwEwkwQHiSg3sksiNIO5MlQpCLleeNrgQCW_J9zNiPDnpGXG9LDOJJhEtmWjjgmZXv/exec';
+
+document.addEventListener('DOMContentLoaded', function() {
+  var form = document.getElementById('contactForm');
+  if (!form) return;
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    var formData = new FormData(form);
+    var fileInput = form.querySelector('input[type="file"]');
+    var submitBtn = form.querySelector('button[type="submit"]');
+    submitBtn.disabled = true;
+
+    // 發送資料 function
+    var send = function() {
+      fetch(GAS_URL, {
+        method: 'POST',
+        body: formData,
+      })
+      .then(res => res.json())
+      .then(data => {
+        alert('已送出成功！');
+        form.reset();
+      })
+      .catch(() => alert('送出失敗，請稍後再試！'))
+      .finally(() => { submitBtn.disabled = false; });
+    };
+
+    if (fileInput && fileInput.files.length > 0) {
+      var file = fileInput.files[0];
+      var reader = new FileReader();
+      reader.onload = function() {
+        var base64 = reader.result.split(',')[1];
+        formData.append('file_base64', base64);
+        formData.append('file_name', file.name);
+        send();
+      };
+      reader.readAsDataURL(file);
+    } else {
+      send();
+    }
+  });
+});
